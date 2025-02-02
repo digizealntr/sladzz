@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css">
     <title>Youtube Clone</title>
     <style>
-        /* Global styles */
         * {
             margin: 0;
             padding: 0;
@@ -23,11 +22,12 @@
             align-items: center;
             min-height: 100vh;
             text-align: center;
+            padding: 20px;
         }
 
         .container {
-            width: 90%;
-            max-width: 1200px;
+            width: 100%;
+            max-width: 900px;
             padding: 20px;
             background-color: #fff;
             border-radius: 8px;
@@ -67,15 +67,16 @@
 
         .contact-buttons {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
-            gap: 15px;
+            gap: 10px;
             margin-top: 20px;
         }
 
         .contact-btn {
             background-color: #25d366;
             color: white;
-            padding: 10px 20px;
+            padding: 10px 15px;
             border-radius: 5px;
             font-size: 16px;
             text-decoration: none;
@@ -83,6 +84,9 @@
             align-items: center;
             gap: 8px;
             transition: background-color 0.3s;
+            flex: 1;
+            min-width: 150px;
+            justify-content: center;
         }
 
         .contact-btn:hover {
@@ -100,6 +104,13 @@
 
         .call-btn:hover {
             background-color: #0056b3;
+        }
+
+        /* Responsive Image */
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
         }
 
         /* Video Packages */
@@ -127,6 +138,37 @@
             font-size: 14px;
             color: #777;
         }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 100%;
+                padding: 15px;
+            }
+
+            #popup-title {
+                font-size: 20px;
+            }
+
+            #popup-description {
+                font-size: 14px;
+            }
+
+            #popup-price {
+                font-size: 16px;
+            }
+
+            .contact-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .contact-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
 
     </style>
 </head>
@@ -158,7 +200,7 @@
             </a>
         </div>
 
-        <div id="popup-packages" style="padding: 5rem;">
+        <div id="popup-packages">
             <h3>Service Packages</h3><br>
 
             <p>🫶🏻HI♤ Ladies  ♡
